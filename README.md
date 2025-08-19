@@ -6,7 +6,7 @@ This project implements a 4-state Moore Finite State Machine (FSM) in Verilog to
 Design a Moore FSM for a traffic light controller ensuring safe transitions and verify it with UVM, covering all states and transitions, to learn VLSI design and verification.
 # Working
 The FSM uses clk and rst inputs, with current_state (2-bit) and timer (4-bit) to cycle states. Outputs (lights) depend on current_state: NS_GREEN (10 cycles), NS_YELLOW (3), EW_GREEN (10), EW_YELLOW (3). The UVM testbench drives inputs, monitors lights, infers states, and checks correctness via a scoreboard.
-## Results
+# Results
 Simulation ran for 825ns (~31 cycles), with console showing Monitor (e.g., state=00, ns_g=1) and Scoreboard: PASS for all states. Waveform confirms: clk (10ns period), rst (10ns high), timer (counts 10/3), lights cycling safely (no dual greens).
 # Inference
 The Moore FSM operates stably, with predictable state transitions and correct light patterns. UVM verification ensures 100% coverage, validating design safety and timing. Waveform analysis confirms long-term reliability.
